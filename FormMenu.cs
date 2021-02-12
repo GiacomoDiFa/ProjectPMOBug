@@ -57,7 +57,7 @@ namespace MenuInterattivo
             if (MessageBox.Show("Sei sicuro di voler passare al pagamento?", "Confermi?", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.Hide();
-                this.formPagamento = new FormPagamento(db);
+                this.formPagamento = new FormPagamento(db,menu);
                 this.formPagamento.Show();
             }
             else

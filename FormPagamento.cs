@@ -18,11 +18,12 @@ namespace MenuInterattivo
         private Menu menu;
         private IDatabase db;
         private Dictionary<IVisitor, Label> visitor;
-        public FormPagamento(IDatabase database)
+        public FormPagamento(IDatabase database,Menu menu)
         {
             InitializeComponent();
             InitializeCalculation();
             this.db = database;
+            this.menu = menu;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -74,9 +75,16 @@ namespace MenuInterattivo
         private bool CheckValueInTextBoxCard()
         {
             bool verifica;
-            if(tboxNome.Text.Length > 0 && tboxCVC.Text.Length == 3 && tboxNumeroCarta.Text.Length == 16 && tboxScadenza.Text.Length == 7)
+            if (tboxNome.Enabled == true && tboxCVC.Enabled == true && tboxNumeroCarta.Enabled == true && tboxScadenza.Enabled == true)
             {
-                verifica = true;
+                if (tboxNome.Text.Length > 0 && tboxCVC.Text.Length == 3 && tboxNumeroCarta.Text.Length == 16 && tboxScadenza.Text.Length == 7)
+                {
+                    verifica = true;
+                }
+                else
+                {
+                    verifica = false;
+                }
             }
             else
             {
@@ -87,9 +95,16 @@ namespace MenuInterattivo
         private bool CheckValueInTextBoxName()
         {
             bool verifica;
-            if(tboxNomeCassa.Text.Length > 0)
+            if (tboxNomeCassa.Enabled == true)
             {
-                verifica = true;
+                if (tboxNomeCassa.Text.Length > 0)
+                {
+                    verifica = true;
+                }
+                else
+                {
+                    verifica = false;
+                }
             }
             else
             {
