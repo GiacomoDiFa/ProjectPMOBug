@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "84xKv+MJgAdAKYCbqSYmr0HrIOc5fGgrWq6j9kYRXNuWnC3Q4XlT7kywzZPUeAiJcbNjfOi1GlByQXZnSCf2lA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Giacomo Di Fabrizio\\source\\repos\\MenuInterattivo\\MenuInterattivo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Giacomo Di Fabrizio\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

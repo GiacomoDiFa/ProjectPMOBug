@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MenuInterattivo.FormBevanda" Collapsed="true">
+    <Position X="12.75" Y="4.75" Width="1.5" />
+    <AssociationLine Name="builder" Type="MenuInterattivo.CreaBevanda.ConcreteBuilderBevanda" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.625" Y="5.441" />
+        <Point X="13.625" Y="7.031" />
+        <Point X="14.75" Y="7.031" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AYAEoAEgCTAQChAQSACIAESDDEAKAhAkAhECAAACJAs=</HashCode>
+      <FileName>FormBevanda.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="builder" />
+      <Field Name="barman" />
+      <Field Name="bevanda" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MenuInterattivo.FormMenu" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhQABAQACQQABBADACAAAACAAAYCAAAAAAAAhBAEAA=</HashCode>
+      <FileName>FormMenu.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="formPizza" />
+      <Field Name="formPanino" />
+      <Field Name="formBevanda" />
+      <Field Name="formPagamento" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MenuInterattivo.FormPagamento" Collapsed="true">
+    <Position X="14.25" Y="3.75" Width="1.5" />
+    <AssociationLine Name="visitor" Type="System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.562" Y="3.75" />
+        <Point X="15.562" Y="1.031" />
+        <Point X="9.25" Y="1.031" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AUAAAgQACDAUBhAAAIDAAAADACADAACEAFgCAGBABSA=</HashCode>
+      <FileName>FormPagamento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="formMenu" />
+      <Field Name="db" />
+      <Field Name="visitor" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MenuInterattivo.FormPanino" Collapsed="true">
+    <Position X="7.25" Y="5.75" Width="1.5" />
+    <AssociationLine Name="db" Type="MenuInterattivo.IDatabase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.438" Y="5.75" />
+        <Point X="7.438" Y="2.031" />
+        <Point X="7.75" Y="2.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="builder" Type="MenuInterattivo.CreaPanino.ConcreteBuilderPanino" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="6.125" />
+        <Point X="9.125" Y="6.125" />
+        <Point X="9.125" Y="6.031" />
+        <Point X="10.25" Y="6.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="paninaro" Type="MenuInterattivo.CreaPanino.Paninaro" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="6.25" />
+        <Point X="9" Y="6.25" />
+        <Point X="9" Y="6.781" />
+        <Point X="10.25" Y="6.781" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAACAAMACWAQQxSAAIDAgBADCAQoAAAAYAEAAKGAJQA=</HashCode>
+      <FileName>FormPanino.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="builder" />
+      <Field Name="paninaro" />
+      <Field Name="panino" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MenuInterattivo.FormPizza" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <AssociationLine Name="pizzaiolo" Type="MenuInterattivo.CreaPizza.Pizzaiolo" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.812" Y="5.691" />
+        <Point X="3.812" Y="6.066" />
+        <Point X="1.5" Y="6.066" />
+        <Point X="1.5" Y="6.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AGAIYAEgDeAQAhEAAQCIAAgDCASIABAAAEARIDAgURg=</HashCode>
+      <FileName>FormPizza.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="builder" />
+      <Field Name="pizzaiolo" />
+      <Field Name="pizza" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MenuInterattivo.FormCarrello" Collapsed="true">
+    <Position X="1.75" Y="3.75" Width="1.5" />
+    <AssociationLine Name="visitor" Type="System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.062" Y="3.75" />
+        <Point X="2.062" Y="1.031" />
+        <Point X="7.75" Y="1.031" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQCAwAAAACAQCBAAIBjEAAACAQEAAAAGIABCAABAAQQ=</HashCode>
+      <FileName>FormCarrello.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+      <Field Name="visitor" />
+      <Field Name="formMenu" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MenuInterattivo.CreaPizza.ConcreteBuilderPizza" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAhABIAAEAAAAAQgAAAAAAAAAAIRAAAwAQA=</HashCode>
+      <FileName>CreaPizza\ConcreteBuilderPizza.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MenuInterattivo.Model.Pizza" Collapsed="true">
+    <Position X="5.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIBAAAQAQAgAAAAAAAAAAQAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Pizza.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MenuInterattivo.CreaPizza.Pizzaiolo" Collapsed="true">
+    <Position X="0.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAAAAAAAAAEAAgAAgAAQAICAAIgAAAAAAQAAA=</HashCode>
+      <FileName>CreaPizza\Pizzaiolo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuInterattivo.Model.Bevanda" Collapsed="true">
+    <Position X="12.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIBAAAQAQAgAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Bevanda.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MenuInterattivo.CreaBevanda.Barman" Collapsed="true">
+    <Position X="14.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAgAAAAIAAARABABAAAACAA=</HashCode>
+      <FileName>CreaBevanda\Barman.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuInterattivo.CreaBevanda.ConcreteBuilderBevanda" Collapsed="true">
+    <Position X="14.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAACAAAAEABAAAAAAKAAAAAAAEAAAAIAICEAAACAA=</HashCode>
+      <FileName>CreaBevanda\ConcreteBuilderBevanda.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MenuInterattivo.CreaPanino.ConcreteBuilderPanino" Collapsed="true">
+    <Position X="10.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAEBAQAAAAAACACAAIAABIAAAIAAEAAAgg=</HashCode>
+      <FileName>CreaPanino\ConcreteBuilderPanino.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MenuInterattivo.CreaPanino.Paninaro" Collapsed="true">
+    <Position X="10.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAABAAAAgAAABIAAAAAAAQAAABAAA=</HashCode>
+      <FileName>CreaPanino\Paninaro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuInterattivo.Model.Panino" Collapsed="true">
+    <Position X="8.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIJAAAQAQAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Panino.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MenuInterattivo.Model.Cibo" Collapsed="true">
+    <Position X="8.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAgAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Cibo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" Collapsed="true">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="MenuInterattivo.IDatabase" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
