@@ -5,12 +5,12 @@
     <AssociationLine Name="builder" Type="MenuInterattivo.CreaBevanda.ConcreteBuilderBevanda" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="13.625" Y="5.441" />
-        <Point X="13.625" Y="7.031" />
-        <Point X="14.75" Y="7.031" />
+        <Point X="13.625" Y="7.281" />
+        <Point X="14" Y="7.281" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AYAEoAEgCTAQChAQSACIAESDDEAKAhAkAhECAAACJAs=</HashCode>
+      <HashCode>AYAEoAEgCTAQChAQSACIAEyDDEAKAhAkAhECAAACJAs=</HashCode>
       <FileName>FormBevanda.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -23,7 +23,7 @@
   <Class Name="MenuInterattivo.FormMenu" Collapsed="true">
     <Position X="7.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAhQABAQACQQABBADACAAAACAAAYCAAAAAAAAhBAEAA=</HashCode>
+      <HashCode>AAhQABAQACQQABBADACAAAgCAAAYCAAAAAAAAhBAEAA=</HashCode>
       <FileName>FormMenu.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -44,7 +44,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AUAAAgQACDAUBhAAAIDAAAADACADAACEAFgCAGBABSA=</HashCode>
+      <HashCode>AUAAAgQACDAUBhAAAIDAAAgDACADAACEAFgCAGBABaA=</HashCode>
       <FileName>FormPagamento.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -79,7 +79,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>gAACAAMACWAQQxSAAIDAgBADCAQoAAAAYAEAAKGAJQA=</HashCode>
+      <HashCode>gAACAAMACWAQQxSAAIDAgBgDCAQoAAAAYAEAAKGAJQA=</HashCode>
       <FileName>FormPanino.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -120,7 +120,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AQCAwAAAACAQCBAAIBjEAAACAQEAAAAGIABCAABAAQQ=</HashCode>
+      <HashCode>AQCAwAAAACAQCBAAIBjEAAgCAQEAAAAGIABCAABAAQQ=</HashCode>
       <FileName>FormCarrello.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -168,7 +168,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MenuInterattivo.CreaBevanda.ConcreteBuilderBevanda" Collapsed="true">
-    <Position X="14.75" Y="6.75" Width="1.5" />
+    <Position X="14" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEAACAAAAEABAAAAAAKAAAAAAAEAAAAIAICEAAACAA=</HashCode>
       <FileName>CreaBevanda\ConcreteBuilderBevanda.cs</FileName>
@@ -201,7 +201,7 @@
   <Class Name="MenuInterattivo.Model.Cibo" Collapsed="true">
     <Position X="8.5" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAgAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAgAAAEgAAAAAQAAAAAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>Model\Cibo.cs</FileName>
     </TypeIdentifier>
   </Class>
