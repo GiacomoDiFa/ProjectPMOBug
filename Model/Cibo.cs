@@ -15,14 +15,11 @@ namespace MenuInterattivo.Model
             {
                 return false;
             }
-
             if (obj.GetType() != this.GetType())
             {
                 return base.Equals(obj);
             }
-
             var other = obj as Cibo;
-
             return string.Compare(Identifier(this),
                 Identifier(other)) == 0;
         }
@@ -33,6 +30,17 @@ namespace MenuInterattivo.Model
         private string Identifier(Cibo cibo)
         {
             return cibo.Name;
+        }
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                int hash = 17;
+                hash = (hash * 23) ^ Name.GetHashCode();
+                hash = (hash * 23) ^ Description.GetHashCode();
+                hash = (hash * 23) ^ Price.GetHashCode();
+                return hash;
+            }
         }
     }
 }

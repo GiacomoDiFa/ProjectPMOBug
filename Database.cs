@@ -13,7 +13,6 @@ namespace MenuInterattivo
     {
         private readonly string DBPath;
         private static Database instance;
-        private JArray totalCiboArray = new JArray();
 
         protected Database(string dataFile)
         {

@@ -45,7 +45,7 @@ namespace MenuInterattivo
 
         private void btnConferma_Click(object sender, EventArgs e)
         {
-            db.GetData();
+            menu.Cibos = db.GetData();
             barman.Builder = builder;
             OrdineBevanda(cboxAcqua, tboxQAcqua);
             OrdineBevanda(cboxVino, tboxQVino);

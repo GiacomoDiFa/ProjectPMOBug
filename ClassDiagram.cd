@@ -112,13 +112,6 @@
   </Class>
   <Class Name="MenuInterattivo.FormCarrello" Collapsed="true">
     <Position X="1.75" Y="3.75" Width="1.5" />
-    <AssociationLine Name="visitor" Type="System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="2.062" Y="3.75" />
-        <Point X="2.062" Y="1.031" />
-        <Point X="7.75" Y="1.031" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AQCAwAAAACAQCBAAIBjEAAgCAQEAAAAGIABCAABAAQQ=</HashCode>
       <FileName>FormCarrello.cs</FileName>
@@ -138,7 +131,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="MenuInterattivo.Model.Pizza" Collapsed="true">
-    <Position X="5.5" Y="9.25" Width="1.5" />
+    <Position X="5.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIIBAAAQAQAgAAAAAAAAAAQAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Pizza.cs</FileName>
@@ -153,7 +146,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MenuInterattivo.Model.Bevanda" Collapsed="true">
-    <Position X="12.25" Y="9.25" Width="1.5" />
+    <Position X="12.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIIBAAAQAQAgAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Bevanda.cs</FileName>
@@ -191,7 +184,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MenuInterattivo.Model.Panino" Collapsed="true">
-    <Position X="8.5" Y="9.25" Width="1.5" />
+    <Position X="8.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIIJAAAQAQAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Panino.cs</FileName>
@@ -199,9 +192,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="MenuInterattivo.Model.Cibo" Collapsed="true">
-    <Position X="8.5" Y="11" Width="1.5" />
+    <Position X="8.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAgAAAEgAAAAAQAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAgAAAEgAAAAAQAAAAAAIAAAAAAQAAAAAA=</HashCode>
       <FileName>Model\Cibo.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -50,6 +50,7 @@
             this.lblCVC = new System.Windows.Forms.Label();
             this.tboxNomeCassa = new System.Windows.Forms.TextBox();
             this.lblNomeCassa = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -246,11 +247,21 @@
             this.lblNomeCassa.TabIndex = 14;
             this.lblNomeCassa.Text = "Nome con cui vieni riconosciuto alla cassa";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(185, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 15);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "€";
+            // 
             // FormPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 500);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNomeCassa);
             this.Controls.Add(this.tboxNomeCassa);
             this.Controls.Add(this.lblCVC);
@@ -306,5 +317,6 @@
         private System.Windows.Forms.Label lblCVC;
         private System.Windows.Forms.TextBox tboxNomeCassa;
         private System.Windows.Forms.Label lblNomeCassa;
+        private System.Windows.Forms.Label label2;
     }
 }

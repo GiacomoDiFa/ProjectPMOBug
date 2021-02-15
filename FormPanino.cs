@@ -46,7 +46,7 @@ namespace MenuInterattivo
 
         private void btnConfermaPanino_Click(object sender, EventArgs e)
         {
-            db.GetData();
+            menu.Cibos = db.GetData();
             paninaro.Builder = builder;
             OrdinePanino(cboxHamburger, tboxQHamburger);
             OrdinePanino(cboxHotDog, tboxQHotDog);

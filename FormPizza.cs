@@ -47,6 +47,7 @@ namespace MenuInterattivo
         }
         private void btnConfermaPizze_Click(object sender, EventArgs e)
         {
+            menu.Cibos = db.GetData();
             pizzaiolo.Builder = builder;
             OrdinePizza(cboxMargherita, tboxQuantitaMargherita);
             OrdinePizza(cboxPepSal, txtboxQPepSal);
