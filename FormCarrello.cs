@@ -41,6 +41,8 @@ namespace MenuInterattivo
         /* closing of form */
         private void FormCarrello_FormClosing(Object sender, FormClosingEventArgs e)
         {
+            menu.Cibos.Clear();
+            this.db.SaveData(menu.Cibos);
             Application.Exit();
         }
         private void LoadStorage()
@@ -72,7 +74,7 @@ namespace MenuInterattivo
                 label.Text = visitor.Result.ToString();
             }
         }
-        /* action of user*/
+        /* action of user */
         private void btnDelete_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem listItem in this.lstViewCibo.SelectedItems)

@@ -34,6 +34,8 @@ namespace MenuInterattivo
         /* closing of form */
         private void FormPizza_FormClosing(Object sender, FormClosingEventArgs e)
         {
+            menu.Cibos.Clear();
+            this.db.SaveData(menu.Cibos);
             Application.Exit();
         }
         /* action uf user*/

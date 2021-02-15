@@ -29,6 +29,8 @@ namespace MenuInterattivo
         /* closing of form */
         private void FormPagamento_FormClosing(Object sender, FormClosingEventArgs e)
         {
+            menu.Cibos.Clear();
+            this.db.SaveData(menu.Cibos);
             Application.Exit();
         }
         /* loading of form */

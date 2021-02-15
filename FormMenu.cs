@@ -26,6 +26,14 @@ namespace MenuInterattivo
             this.db = database;
             this.menu = menu;
         }
+        /* form closing */
+        private void FormPizza_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            menu.Cibos.Clear();
+            this.db.SaveData(menu.Cibos);
+            Application.Exit();
+        }
+        /* action of user */
         private void btnPizza_Click(object sender, EventArgs e)
         {
             this.Hide();
