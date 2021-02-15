@@ -11,6 +11,7 @@ Specifica:
 Il progetto consiste nella realizzazione di un software grafico per l’ordinazione di pasti e bevande.
 
 Suddetto software dovrà consentire:
+
 •	La selezione delle pietanze (con relativa quantità) desiderate.
 
 •	La rimozione di pietanze che precedentemente erano state selezionate.
