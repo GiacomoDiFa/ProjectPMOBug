@@ -20,6 +20,7 @@ namespace MenuInterattivo
         private Bevanda bevanda = null;
         public FormBevanda(IDatabase database,Menu menu)
         {
+            this.FormClosing += this.FormBevanda_FormClosing;
             InitializeComponent();
             this.db = database;
             this.menu = menu;
@@ -29,7 +30,11 @@ namespace MenuInterattivo
         {
             EnableTextBoxes();
         }
-
+        /* closing of form */
+        private void FormBevanda_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
         /* action of user */
         private void btnBevandaMenu_Click(object sender, EventArgs e)
         {
@@ -42,7 +47,6 @@ namespace MenuInterattivo
             ResetTextBoxes();
             ResetCheckBoxes();
         }
-
         private void btnConferma_Click(object sender, EventArgs e)
         {
             menu.Cibos = db.GetData();
@@ -124,7 +128,6 @@ namespace MenuInterattivo
                 }
             }
         }
-        
         /* managment of checkbox and textbox*/
         private void EnableTextBoxes()
         {
@@ -177,68 +180,55 @@ namespace MenuInterattivo
             };
             func(Controls);
         }
-
         private void cboxAcqua_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQAcqua);
         }
-
         private void cboxVino_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQVino);
         }
-
         private void cboxBirra_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQBirra);
         }
-
         private void cboxCocaCola_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQCocaCola);
         }
-
         private void cboxFanta_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQFanta);
         }
-
         private void cboxSprite_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQSprite);
         }
-
         /* function that allows you to type only numbers from the keyboard*/
         internal void HandleQuantityInput(KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
         private void tboxQAcqua_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQVino_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQBirra_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQCocaCola_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQFanta_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQSprite_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);

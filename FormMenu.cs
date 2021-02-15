@@ -32,7 +32,6 @@ namespace MenuInterattivo
             this.formPizza = new FormPizza(db,menu);
             this.formPizza.Show();
         }
-
         private void btnPanino_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -51,7 +50,6 @@ namespace MenuInterattivo
             this.formCarrello = new FormCarrello(db,menu);
             this.formCarrello.Show();
         }
-
         private void btnSendMenu_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Sei sicuro di voler passare al pagamento?", "Confermi?", MessageBoxButtons.YesNo) == DialogResult.Yes)

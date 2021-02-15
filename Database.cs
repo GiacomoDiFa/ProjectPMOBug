@@ -13,7 +13,6 @@ namespace MenuInterattivo
     {
         private readonly string DBPath;
         private static Database instance;
-
         protected Database(string dataFile)
         {
             this.DBPath = dataFile;
@@ -26,7 +25,6 @@ namespace MenuInterattivo
             }
             return instance;
         }
-
         public List<Cibo> GetData()
         {
             List<Cibo> cibos = null;

@@ -7,10 +7,10 @@ namespace MenuInterattivo.Model
     public class Menu
     {
         private static Menu instance = null;
-        private List<Cibo> cibos;
+        public List<Cibo> Cibos { get; set; }
         protected Menu()
         {
-            this.cibos = new List<Cibo>();
+            this.Cibos = new List<Cibo>();
         }
         public static Menu Instance()
         {
@@ -19,17 +19,6 @@ namespace MenuInterattivo.Model
                 instance = new Menu();
             }
             return instance;
-        }
-        public List<Cibo> Cibos
-        {
-            get
-            {
-                return cibos;
-            }
-            set
-            {
-                this.cibos = value;
-            }
         }
     }
 }

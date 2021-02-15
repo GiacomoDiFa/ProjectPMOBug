@@ -29,37 +29,30 @@ namespace MenuInterattivo.CreaBevanda
         {
             this.bevanda.Add(componenteCreatorArray[0].FactoryMethod());
         }
-
         public void CreaBirra()
         {
             this.bevanda.Add(componenteCreatorArray[1].FactoryMethod());
         }
-
         public void CreaCocaCola()
         {
             this.bevanda.Add(componenteCreatorArray[2].FactoryMethod());
         }
-
         public void CreaFanta()
         {
             this.bevanda.Add(componenteCreatorArray[3].FactoryMethod());
         }
-
         public void CreaGassosa()
         {
             this.bevanda.Add(componenteCreatorArray[4].FactoryMethod());
         }
-
         public void CreaGhiaccio()
         {
             this.bevanda.Add(componenteCreatorArray[5].FactoryMethod());
         }
-
         public void CreaLimone()
         {
             this.bevanda.Add(componenteCreatorArray[6].FactoryMethod());
         }
-
         public void CreaVino()
         {
             this.bevanda.Add(componenteCreatorArray[7].FactoryMethod());

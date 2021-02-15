@@ -20,17 +20,21 @@ namespace MenuInterattivo
         private Panino panino = null;
         public FormPanino(IDatabase database,Menu menu)
         {
+            this.FormClosing += this.FormPanino_FormClosing;
             InitializeComponent();
             this.db = database;
             this.menu = menu;
         }
-
         /* loading of form of program */
         private void FormPanino_Load(object sender, EventArgs e)
         {
             EnableTextBoxes();
         }
-
+        /* closing of form */
+        private void FormPanino_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
         /* action of user */
         private void btnMenuPanino_Click(object sender, EventArgs e)
         {
@@ -43,7 +47,6 @@ namespace MenuInterattivo
             ResetTextBoxes();
             ResetCheckBoxes();
         }
-
         private void btnConfermaPanino_Click(object sender, EventArgs e)
         {
             menu.Cibos = db.GetData();
@@ -115,7 +118,6 @@ namespace MenuInterattivo
                 }
             }
         }
-
         /* managment of checkbox and textbox*/
         private void EnableTextBoxes()
         {
@@ -168,58 +170,47 @@ namespace MenuInterattivo
             };
             func(Controls);
         }
-
         private void cboxHamburger_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQHamburger);
         }
-
         private void cboxHotDog_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQHotDog);
         }
-
         private void cboxCheeseburger_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQCheeseburger);
         }
-
         private void cboxChickenBurger_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQChickenBurger);
         }
-
         private void cboxToast_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQToast);
         }
-
         /* function that allows you to type only numbers from the keyboard*/
         internal void HandleQuantityInput(KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
         private void tboxQHamburger_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQHotDog_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQCheeseburger_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQChickenBurger_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQToast_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);

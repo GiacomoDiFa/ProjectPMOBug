@@ -30,42 +30,34 @@ namespace MenuInterattivo.CreaPanino
         {
             this.panino.Add(ingredientiCreatorArray[0].FactoryMethod());
         }
-
         public void CreaHotDog()
         {
             this.panino.Add(ingredientiCreatorArray[1].FactoryMethod());
         }
-
         public void CreaInsalata()
         {
             this.panino.Add(ingredientiCreatorArray[2].FactoryMethod());
         }
-
         public void CreaKetchup()
         {
             this.panino.Add(ingredientiCreatorArray[3].FactoryMethod());
         }
-
         public void CreaMaionese()
         {
             this.panino.Add(ingredientiCreatorArray[4].FactoryMethod());
         }
-
         public void CreaPollo()
         {
             this.panino.Add(ingredientiCreatorArray[5].FactoryMethod());
         }
-
         public void CreaPomodoro()
         {
             this.panino.Add(ingredientiCreatorArray[6].FactoryMethod());
         }
-
         public void CreaProsciuttoCotto()
         {
             this.panino.Add(ingredientiCreatorArray[7].FactoryMethod());
         }
-
         public void CreaSottiletta()
         {
             this.panino.Add(ingredientiCreatorArray[8].FactoryMethod());

@@ -10,7 +10,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AYAEoAEgCTAQChAQSACIAEyDDEAKAhAkAhECAAACJAs=</HashCode>
+      <HashCode>AYAEoAEgCTBQChAQSACIAEyDDEAKAhAkAhECAAACJAs=</HashCode>
       <FileName>FormBevanda.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -44,7 +44,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AUAAAgQACDAUBhAAAIDAAAgDACADAACEAFgCAGBABaA=</HashCode>
+      <HashCode>AUAAAgQACDAUBhAAAIDAAAgDACADEACEAFgCAGBABaA=</HashCode>
       <FileName>FormPagamento.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -73,13 +73,13 @@
     <AssociationLine Name="paninaro" Type="MenuInterattivo.CreaPanino.Paninaro" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="8.75" Y="6.25" />
-        <Point X="9" Y="6.25" />
-        <Point X="9" Y="6.781" />
+        <Point X="9.25" Y="6.25" />
+        <Point X="9.25" Y="6.781" />
         <Point X="10.25" Y="6.781" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>gAACAAMACWAQQxSAAIDAgBgDCAQoAAAAYAEAAKGAJQA=</HashCode>
+      <HashCode>gAACAAMACWAQQxSAAIDAgBgDCAQoAAAAYAEAQKGAJQA=</HashCode>
       <FileName>FormPanino.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -100,7 +100,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AGAIYAEgDeAQAhEAAQCIAAgDCASIABAAAEARIDAgURg=</HashCode>
+      <HashCode>AGAIYAEgDeAQAhUAAQCIAAgDCASIABAAAEARIDAgURg=</HashCode>
       <FileName>FormPizza.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -113,7 +113,7 @@
   <Class Name="MenuInterattivo.FormCarrello" Collapsed="true">
     <Position X="1.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQCAwAAAACAQCBAAIBjEAAgCAQEAAAAGIABCAABAAQQ=</HashCode>
+      <HashCode>AQCAwAACACAQCBAAIBjEAAgCAQEAAAAGIABCAABAAQQ=</HashCode>
       <FileName>FormCarrello.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

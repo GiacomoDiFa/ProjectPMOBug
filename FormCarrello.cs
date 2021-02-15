@@ -20,10 +20,15 @@ namespace MenuInterattivo
         private FormMenu formMenu;
         public FormCarrello(IDatabase database,Menu menu)
         {
+            this.FormClosing += this.FormCarrello_FormClosing;
             InitializeComponent();
             InitializeCalculation();
             db = database;
             this.menu = menu;
+            LoadStorage();
+        }
+        private void FormCarrello_Load(object sender, EventArgs e)
+        {
             LoadStorage();
         }
         private void InitializeCalculation()
@@ -32,6 +37,11 @@ namespace MenuInterattivo
                 { new ItemCounter(), this.lblQNumeroCibo },
                 { new ItemTotalValue(), this.lblQPrezzoTotale }
             };
+        }
+        /* closing of form */
+        private void FormCarrello_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
         private void LoadStorage()
         {
@@ -62,12 +72,7 @@ namespace MenuInterattivo
                 label.Text = visitor.Result.ToString();
             }
         }
-
-        private void FormCarrello_Load(object sender, EventArgs e)
-        {
-            LoadStorage();
-        }
-
+        /* action of user*/
         private void btnDelete_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem listItem in this.lstViewCibo.SelectedItems)
@@ -79,7 +84,6 @@ namespace MenuInterattivo
             SaveCurrentStorage();
             LoadStorage();
         }
-
         private void btnTornaAlMenu_Click(object sender, EventArgs e)
         {
             this.Hide();

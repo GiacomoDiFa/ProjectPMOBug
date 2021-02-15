@@ -58,7 +58,6 @@ namespace MenuInterattivo.CreaPizza
         {
             this.pizza.Add(condimentiCreatorArray[7].FactoryMethod());
         }
-
         public void CreaPatatina()
         {
             this.pizza.Add(condimentiCreatorArray[8].FactoryMethod());

@@ -20,22 +20,42 @@ namespace MenuInterattivo
         private Dictionary<IVisitor, Label> visitor;
         public FormPagamento(IDatabase database,Menu menu)
         {
+            this.FormClosing += this.FormPagamento_FormClosing;
             InitializeComponent();
             InitializeCalculation();
             this.db = database;
             this.menu = menu;
         }
-        private void button1_Click(object sender, EventArgs e)
+        /* closing of form */
+        private void FormPagamento_FormClosing(Object sender, FormClosingEventArgs e)
         {
-            this.Hide();
-            this.formMenu = new FormMenu(db,menu);
-            this.formMenu.Show();
+            Application.Exit();
+        }
+        /* loading of form */
+        private void FormPagamento_Load(object sender, EventArgs e)
+        {
+            EnableTextBoxes();
+            LoadValue();
         }
         private void InitializeCalculation()
         {
             visitor = new Dictionary<IVisitor, Label> {
                 { new ItemTotalValue(), this.lblTotale }
             };
+        }
+        private void LoadValue()
+        {
+            try
+            {
+                menu.Cibos = db.GetData();
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine("Can't connect " + ex.Message);
+                Console.Error.WriteLine(ex.StackTrace);
+                return;
+            }
+            UpdateCalculations();
         }
         private void UpdateCalculations()
         {
@@ -49,8 +69,13 @@ namespace MenuInterattivo
                 label.Text = visitor.Result.ToString();
             }
         }
-
-
+        /* action uf user */
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.formMenu = new FormMenu(db,menu);
+            this.formMenu.Show();
+        }
         private void btnConferma_Click(object sender, EventArgs e)
         {
             if (CheckValueInTextBoxCard() || CheckValueInTextBoxName() == true)
@@ -72,6 +97,7 @@ namespace MenuInterattivo
                 this.Show();
             }
         }
+        /* control */
         private bool CheckValueInTextBoxCard()
         {
             bool verifica;
@@ -112,27 +138,6 @@ namespace MenuInterattivo
             }
             return verifica;
         }
-
-        private void FormPagamento_Load(object sender, EventArgs e)
-        {
-            EnableTextBoxes();
-            LoadValue();
-        }
-        private void LoadValue()
-        {
-            try
-            {
-                menu.Cibos = db.GetData();
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine("Can't connect " + ex.Message);
-                Console.Error.WriteLine(ex.StackTrace);
-                return;
-            }
-            UpdateCalculations();
-        }
-
         private void cboxMastercard_CheckedChanged(object sender, EventArgs e)
         {
             if (this.cboxMastercard.Checked == true)
@@ -153,7 +158,6 @@ namespace MenuInterattivo
                 tboxScadenza.Enabled = false;
             }
         }
-
         private void cboxVisa_CheckedChanged(object sender, EventArgs e)
         {
             if (this.cboxVisa.Checked == true)

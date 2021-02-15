@@ -21,24 +21,27 @@ namespace MenuInterattivo
         private Pizza pizza = null;
         public FormPizza(IDatabase database,Menu menu)
         {
+            this.FormClosing += this.FormPizza_FormClosing;
             InitializeComponent();
             this.db = database;
             this.menu = menu;
         }
-
         /* loading of form of program*/
         private void FormPizza_Load(object sender, EventArgs e)
         {
             EnableTextBoxes();
         }
-
+        /* closing of form */
+        private void FormPizza_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
         /* action uf user*/
         private void btnReset_Click(object sender, EventArgs e)
         {
             ResetTextBoxes();
             ResetCheckBoxes();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -60,7 +63,6 @@ namespace MenuInterattivo
             FormMenu formMenu = new FormMenu(db,menu);
             formMenu.Show();
         }
-
         /* managment of creation of order of different kind of pizza */
         private void OrdinePizza(CheckBox checkBox, TextBox textBox)
         {
@@ -187,58 +189,47 @@ namespace MenuInterattivo
         {
             (sender as CheckBox).EnableCheckBox(tboxQuantitaMargherita);
         }
-
         private void cboxOlive_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQOlive);
         }
-
         private void cboxFunghiSalsiccia_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQFunghiSalsiccia);
         }
-
         private void cboxSalamePiccante_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQSalamePiccante);
         }
-
         private void cboxWustelPatatine_CheckedChanged(object sender, EventArgs e)
         {
             (sender as CheckBox).EnableCheckBox(tboxQWustelPatatine);
         }
-
         /* function that allows you to type only numbers from the keyboard*/
         internal void HandleQuantityInput(KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar); 
         }
-
         private void tboxQuantitaMargherita_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void txtboxQPepSal_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQOlive_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQFunghiSalsiccia_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQSalamePiccante_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
         }
-
         private void tboxQWustelPatatine_KeyPress(object sender, KeyPressEventArgs e)
         {
             HandleQuantityInput(e);
