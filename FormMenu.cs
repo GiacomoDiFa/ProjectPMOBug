@@ -22,12 +22,13 @@ namespace MenuInterattivo
         private FormPagamento formPagamento;
         public FormMenu(IDatabase database,Menu menu)
         {
+            FormClosing += this.FormMenu_FormClosing;
             InitializeComponent();
             this.db = database;
             this.menu = menu;
         }
         /* form closing */
-        private void FormPizza_FormClosing(Object sender, FormClosingEventArgs e)
+        private void FormMenu_FormClosing(Object sender, FormClosingEventArgs e)
         {
             menu.Cibos.Clear();
             this.db.SaveData(menu.Cibos);
