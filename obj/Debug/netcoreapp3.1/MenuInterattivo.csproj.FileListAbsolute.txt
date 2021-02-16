@@ -19,6 +19,5 @@ C:\Users\Giacomo Di Fabrizio\source\repos\MenuInterattivo\obj\Debug\netcoreapp3.
 C:\Users\Giacomo Di Fabrizio\source\repos\MenuInterattivo\obj\Debug\netcoreapp3.1\MenuInterattivo.csproj.CoreCompileInputs.cache
 C:\Users\Giacomo Di Fabrizio\source\repos\MenuInterattivo\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Giacomo Di Fabrizio\source\repos\MenuInterattivo\obj\Debug\netcoreapp3.1\MenuInterattivo.csproj.CopyComplete
-C:\Users\Giacomo Di Fabrizio\source\repos\MenuInterattivo\bin\Debug\netcoreapp3.1\Database.txt
 C:\Users\Giacomo Di Fabrizio\source\repos\MenuInterattivo\obj\Debug\netcoreapp3.1\MenuInterattivo.FormCarrello.resources
 C:\Users\Giacomo Di Fabrizio\source\repos\MenuInterattivo\obj\Debug\netcoreapp3.1\MenuInterattivo.FormPagamento.resources
